@@ -12,11 +12,10 @@ public class Main {
 
         System.out.println("Welcome to the manager system!!!\n     ----");
         while (true) {
-            System.out.println("1 - Register your products\n2 - List products\n3 - Search for a product\n0 - Exit");
+            System.out.println("1 - Register your products\n2 - List products name\n3 - Detailed List\n0 - Exit");
 
             Scanner s = new Scanner(System.in);
 
-            Product product = new Product();
             String op = s.next();
             switch (op) {
                 case "1":
@@ -26,9 +25,10 @@ public class Main {
                     products.forEach(e -> System.out.println(e.getName()));
                     break;
                 case "3":
-                    //products.getName
+                	products.forEach(e -> System.out.println("-Name: " + e.getName() + "-Price: " + e.getPrice()
+                	 + "-Quantity: " + e.getQuantity() + "-Description: " + e.getDescription() + "-Category: " + e.getCategory()));		
                     break;
-                case "4":
+                case "0":
                     System.exit(0);
                     break;
 
@@ -59,7 +59,8 @@ public class Main {
         String category = s.next();
 
         Product product = new Product(name, price, description, quantity, category);
-
+        
         return product;
+      
     }
 }
