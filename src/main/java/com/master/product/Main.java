@@ -9,7 +9,6 @@ public class Main {
     public static List<Product> products = new ArrayList<>();
 
     public static void main(String[] args) {
-
         System.out.println("Welcome to the manager system!!!\n     ----");
         while (true) {
             System.out.println("1 - Register your products\n2 - List products name\n3 - Detailed List\n0 - Exit");
@@ -26,12 +25,18 @@ public class Main {
                     break;
                 case "3":
                 	products.forEach(e -> System.out.println("-Name: " + e.getName() + "-Price: " + e.getPrice()
-                	 + "-Quantity: " + e.getQuantity() + "-Description: " + e.getDescription() + "-Category: " + e.getCategory()));		
+                	 + "-Quantity: " + e.getQuantity() + "-Description: " + e.getDescription()
+                            + "-Category: " + e.getCategory()));
                     break;
+//                case "4":
+//                    String nameSearch;
+//                    nameSearch = s.next();
+//                    System.out.println(register().getName());
+//                    System.exit(0);
+//                    break;
                 case "0":
                     System.exit(0);
                     break;
-
                 default:
                     System.out.println("This option doesn't exist");
                     break;
@@ -63,4 +68,5 @@ public class Main {
         return product;
       
     }
+
 }
