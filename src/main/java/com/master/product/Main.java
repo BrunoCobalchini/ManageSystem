@@ -25,15 +25,8 @@ public class Main {
                     break;
                 case "3":
                 	products.forEach(e -> System.out.println("-Name: " + e.getName() + "-Price: " + e.getPrice()
-                	 + "-Quantity: " + e.getQuantity() + "-Description: " + e.getDescription()
-                            + "-Category: " + e.getCategory()));
+                	 + "-Quantity: " + e.getQuantity() + "-Description: " + e.getDescription()));
                     break;
-//                case "4":
-//                    String nameSearch;
-//                    nameSearch = s.next();
-//                    System.out.println(register().getName());
-//                    System.exit(0);
-//                    break;
                 case "0":
                     System.exit(0);
                     break;
@@ -63,7 +56,7 @@ public class Main {
         System.out.print("Category: ");
         String category = s.next();
 
-        Product product = new Product(name, price, description, quantity, category);
+        Product product = new Product(name, price, description, quantity);
         
         return product;
       

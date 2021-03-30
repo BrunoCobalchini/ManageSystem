@@ -36,7 +36,7 @@ public class ProductTest {
 
     @Test
     public void test() { //Esperado passar
-        Product p = new Product("Test", 2.2, "Test",12, "Test");
+        Product p = new Product("Test", 2.2, "Test",12);
         assertSame(p, p);
     }
 
